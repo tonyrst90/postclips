@@ -1,0 +1,304 @@
+// General variables
+$theme-font-color: #161616;
+$theme-body-font-color: $theme-font-color;
+$theme-body-sub-title-color: #959595;
+$body-color: #F2F5FA;
+$main-body-color: #F2F5FA;
+// Theme colors variables
+$primary-color: #003FDD;
+$secondary-color: #FF9766;
+$success-color: #61AE41;
+$info-color : #298fbf;
+$warning-color: #E7AE2F;
+$danger-color: #F81F58;
+$light-color : #F2F5FA;
+$badge-light-color: #52526c;
+$light-gray : rgba(106, 113, 133, 0.20);
+$light-widget-border: #EFEEFF;
+$light-semi-gray :rgba(106, 113, 133, 0.20);
+$font-gray-color: #6C757D;
+$dark-light :$theme-font-color;
+$dark-gray: #9B9B9B;
+$dark-color : #2c323f;
+$dark-color-light: #2c323fb8;
+$gray-60 :#cccccc;
+$card-body-color : #f9f9fa;
+$transparent-color: transparent;
+$auth-bg-color: #fafafa;
+$light : #fdfeff;
+$semi-dark :#59667a;
+$light-text: #999999;
+$light-paragraph: #8F8F8F;
+$light-background: #d7e2e9;
+$light-font: rgba(27, 49, 85, 0.4);
+$light-semi-font: $semi-dark;
+$light-chartist-grid-color: #f6f9fd;
+$pitch-color: #fe8a7d;
+$color-scarpa: #4c5667;
+$color-fiord: #455a64;
+$black : #000;
+$white: #fff;
+$off-white: #F7F6FF;
+$theme-medium-color: #eae8ff;
+$dropdown-border-color: #918E99;
+$light-primary: rgba(92, 97, 242, 0.2);
+$light-secondary: #FFE0E8;
+$light-success: #D6EED4;
+$light-info: #D5F5FE;
+$light-warning: #FFF0D2;
+$light-danger: #FEDDDB;
+$light-white: #F9F9FB;
+$light-dark: #EAEBF2;
+$font-light: #E9E9E9;
+$header-light-bg: rgba($primary-color , 0.05);
+$light-button: #F6F6F6;
+$rating-color: #ffa800;
+// gradient colors
+$gradient-primary: linear-gradient(26deg, var(--theme-default) 0%, #a26cf8 100%);
+$gradient-bg-primary: linear-gradient(103.75deg, #33B1EE -13.9%, var(--theme-default) 79.68%);
+//social colors
+$fb: #50598e;
+$twitter: #6fa2d8;
+$google-plus: #c64e40;
+$linkedin: #0077B5;
+// soical table 
+$fb-color: #2F84F4;
+$insta-color: #FC971E;
+$pintrest-color: $secondary-color;
+$twitter-color: #57B9F6;
+$youtube-color: #F42F2F;
+//error input color start
+$light-body-bg-color: #fafdff;
+// typography variables
+$heading_1: 30px;
+$heading_2: 24px;
+$heading_3: 20px;
+$heading_4: 18px;
+$heading_5: 16px;
+$heading_6: 14px;
+$common_letter_spacing: 0;
+//fonts
+$font-lexend: 'Lexend', sans-serif;
+$font-roboto: Roboto;
+$font-serif: sans-serif;
+$landing-dmsans: 'DM Sans', sans-serif;
+$landing-cursive: 'Caveat', cursive;
+$font-themify: themify;
+$font-awesome: FontAwesome;
+$font-ICO: IcoFont;
+$landing-header: #323C58;
+$landing-card-box-shadow: -13px 8px 41px rgba(42, 54, 80, 0.25);
+// dark layout variables
+$dark-background: #000000;
+$dark-body-background: #161616;
+$dark-card-background: #161616;
+$dark-sidebar-background: #242424;
+$dark-form-background: #0F0F0F;
+$dark-background: #21283b;
+$dark-card-inbox: #323846;
+$dark-small-font-color: #98a6ad;
+$dark-all-font-color: rgba(255, 255, 255, 0.6);
+$light-all-font-color: rgba(255, 255, 255, 0.2);
+$dark-border-color: $dark-body-background;
+$dark-card-border: #6A718533;
+$dark-editor-document: #2b2b2b;
+$bg-dark-color: #1f2533;
+$dark-datatable-odd: $dark-body-background;
+$dark-datatable-sorting: $dark-card-background;
+$dark-datatable-sorting-even: $dark-body-background;
+$dark-even-hover-sorting: #161616;
+//General tag settings
+$body-font-size: 14px;
+$body-font-color: $theme-body-font-color;
+$ul-padding-left: 0px;
+$ancher-color: var(--theme-default);
+$btn-focus-box-shadow: none;
+$all-focus-outline-color: var(--theme-default);
+$paragraph-font-size : 14px;
+$paragraph-line-height : 1.7;
+$paragraph-letter-spacing : 0.7px;
+$code-tag-color: var(--theme-default);
+$code-tag-bg-color: rgba($primary-color, 0.03);
+$code-tag-padding: 3px;
+$code-tag-margin: 0 3px;
+$code-tag-border-radius: 2px;
+$blockquote-padding : 8px;
+$blockquote-border : 4px solid $primary-color;
+$small-tag-padding: 10px;
+$small-tag-color: $dark-color;
+$pre-tag-bg-color: rgba($primary-color, 0.03);
+$pre-tag-padding: 20px 0;
+$list-group-active-bg-color: var(--theme-default);
+$list-group-active-border-color: var(--theme-default);
+$list-group-img-size: 40px;
+$list-group-margin: 10px;
+// Tables settings
+$table-b-margin: 0px;
+$table-heading-color: $theme-body-font-color;
+$table-row-color: $theme-body-font-color;
+$table-footer-font-weight: bold;
+$table-inverse-color: $white;
+$table-hover-color: $light;
+$table-padding: 0.75rem;
+$table-xl-padding: 1.25rem 2rem;
+$table-xl-font: 120%;
+$table-lg-padding: .9rem 2rem;
+$table-lg-font: 110%;
+$table-de-padding: .75rem 2rem;
+$table-de-font: 100%;
+$table-sm-padding: .5rem 2rem;
+$table-sm-font: 90%;
+$table-xs-padding: 0.2rem 2rem;
+$table-xs-font: 80%;
+$horizontal-border-color: #f2f4ff;
+$horizontal-padding: .75rem 2rem;
+$table-inverse-bg-color: #292b2c;
+//According setting
+$according-card-top-margin : 10px;
+$according-btn-weight : 500;
+$according-btn-color : $theme-body-font-color;
+$according-card-header-padding : 0.75rem 1.25rem;
+$according-card-header-icon : $font-ICO;
+$according-open-icon : "\eb73";
+$according-close-icon : "\eb7a";
+//Alert settings
+$alert-hover-color :$dark-color;
+$alert-border-radius :0.15rem;
+$alert-padding :15px;
+$alert-msg-icon-size :16px;
+//badge settings
+$badge-padding :0.44em 0.7em;
+$badge-svg-size :16px;
+//form input settings
+$form-group-margin-bottom : 1.25em;
+$col-form-label-font-size : 14px;
+$form-control-font-size : 14px;
+$form-control-border-radius : 2px;
+$form-control-border-color : $light-gray;
+//breadcrumb setting
+$breadcrumb-ancher-color : $white;
+$breadcrumb-ancher-dark-color : $black;
+//buttons setting
+$btn-font-size : 14px;
+$btn-padding : 0.375rem 1.75rem;
+$btn-lg-font-size: 18px;
+$btn-sm-font-size: 12px;
+$btn-xs-font-size: 11px;
+$btn-xs-padding: 0.05rem 0.4rem;
+//Card settings
+$card-padding :18px;
+$card-margin-bottom : 24px;
+$card-border : none;
+$card-border-radius : 15px;
+$card-border-color :1px solid $light-gray;
+$common-shadow-color : rgba($info-color, 0.08);
+$card-box-shadow : 0px 0px 35px 0px rgba(233, 237, 242, 0.60);
+$card-header-bg-color : $white;
+$card-header-font-transform : capitalize;
+$card-header-span-size : 12px;
+$card-header-span-color : $theme-body-sub-title-color;
+$card-body-bg-color : $transparent-color;
+$card-footer-bg-color : $white;
+$card-hover-box-shadow : 0 0 40px rgba(8, 21, 66, .05);
+// According settings
+$card-border-width :0px;
+$card-header-font-weight : 600;
+$card-header-font-size : 16px;
+$card-header-font-color : $theme-body-font-color;
+//footer settings
+$footer_bg_color : $white;
+$footer_box_shadow : 0 0 20px rgba($semi-dark, 0.1);
+$footer_dark_color : $theme-font-color;
+$footer_dark__txt_color : $white;
+//form settings
+$form-group-margin-bottom :20px;
+$sm-form-margin-bottom : 14px;
+$form-placeholder-color : $dark-gray;
+$form-placeholder-font-size : 14px;
+$form-placeholder-letter-spacing : 1px;
+$form-placeholder-font-weight : 400;
+$form-input-border-color : $light-semi-gray;
+$form-input-bg-color : $white;
+//Tour settings
+$tour-color: var(--theme-default);
+//sidabr main settings
+$sidebar-width: 253px;
+$sidebar-position: fixed;
+$sidebar-background-color: $white;
+$sidebar-horizontal-background: #f6f8fc;
+$sidebar-shadow: 0 0 11px rgba(69, 110, 243, 0.13);
+$sidebar-overflow: auto;
+$sidebar-z-index: 9;
+$sidebar-transition: 0.5s;
+$sidebar-fill-icon-color: #9FA8C1;
+$sidebar-background: #FFFFFF;
+$sidebar-toggle-background: rgba(63, 126, 187, 0.85);
+$sidebar-section-background: #222434;
+$sidebar-dashed-border: #6A7185;
+//sidebar profile settings
+$sidebar-profile-edit-icon-size: 14px;
+$sidebar-profile-name-txt-color : var(--theme-default);
+$sidebar-profile-name-txt-transfer : uppercase;
+$sidebar-profile-name-txt-weight : 600;
+$sidebar-profile-name-letter-specing : 1.5px;
+$sidebar-profile-name-marging : 3px;
+$sidebar-profile-sub-title-font-size: 10px;
+$sidebar-profile-sub-title-margin: 0px;
+$sidebar-profile-img-shadow: 0 0 15px rgba(68, 102, 242, 0.3);
+//Sidebar main menu setting
+$sidebar-menu-padding: 15px;
+$sidebar-menu-list-style: none;
+$sidebar-menu-list-margin: 0;
+$sidebar-icon-size: 14px;
+$sidebar-icon-margin: 14px;
+$sidebar-icon-stroke-width: 3px;
+$sidebar-font-size: 14px;
+$sidebar-letter-specing: 0.5px;
+$sidebar-txt-transform: capitalize;
+$sidebar-font-weight: 600;
+$sidebar-font-color: $theme-body-font-color;
+$sidebar-padding-top: 12px;
+$sidebar-padding-bottom: 12px;
+$sidebar-sub-header-padding: 15px;
+$sidebar-sub-header-margin: 0;
+$sidebar-heading-hover-padding: 5px;
+$sidebar-hover-txt-color: var(--theme-default);
+$sidebar-arrow-margin-top: 2px;
+$sidebar-arrow-size: 15px;
+$sidebar-arrow-color: $theme-body-font-color;
+$sidebar-open-icon: "\f107";
+$sidebar-close-icon: "\f105";
+$sidebar-icon-font-family: $font-awesome;
+$sidebar-height: calc(100vh - 115px);
+$sidebar-compact-width: 253px;
+//Header settings
+$main-header-position: fixed;
+$main-header-top: 0;
+$main-header-shadow: 0 0 20px rgba($semi-dark, 0.1);
+$main-header-shadow-1: 0px 4px 40px 0px rgba(0, 0, 0, 0.07);
+//page settings
+$page-body-padding : 0 26px 0 26px;
+$page-body-bg-color: $light-color;
+$page-body-margin-bottom: 0px;
+$page-title-padding : 22px 28px;
+$common-box-shadow: 2px 3.464px 8px 0px rgba(22, 145, 248, 0.18);
+$page-title-font-size: 24px;
+$page-title-margin-bottom: 0;
+$page-title-text-tranform: capitalize;
+$page-small-title-display: block;
+$page-small-title-font-size: 12px;
+$page-small-title-margin-bottom: 5px;
+$page-small-title-text-transform: capitalize;
+$page-small-title-text-color: $theme-body-sub-title-color;
+$breadcrumb-size: 16px;
+$breadcrumb-content: "/";
+//main header left settings
+$main-header-z-index : 3;
+$header-wrapper-padding: 6px 20px;
+$header-wrapper-nav-icon-size : 22px;
+$header-wrapper-nav-icon-color : $theme-font-color;
+$header-wrapper-nav-icon-align : middle;
+$header-size: 136px;
+$box-layout-space : 40px;
+// widgets variables
+$widget-shadow: 1px 2px 21px -2px rgba(214, 214, 227, 0.83);

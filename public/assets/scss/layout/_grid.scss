@@ -1,0 +1,29 @@
+/**=====================
+  5.2 Grid CSS Start
+==========================**/
+.grid-showcase {
+  margin-bottom: -10px;
+  span {
+    display: block;
+    border: 1px solid $light-color;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: rgba($primary-color, 0.05) !important;
+    color: $primary-color !important;
+    font-weight: 500;
+  }
+}
+.grid-align {
+  margin-bottom: -30px;
+  .row {
+    padding: 15px 0;
+    min-height: 10rem;
+    border: 1px solid rgba($primary-color, 0.02);
+    margin-bottom: 30px;
+    background-color: rgba($primary-color, 0.02) !important;
+  }
+}
+/**=====================
+    5.2 Grid CSS Ends
+==========================**/

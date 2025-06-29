@@ -1,0 +1,47 @@
+.gender-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  &__donut {
+    margin-bottom: 16px;
+  }
+
+  &__legend {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+
+      .label {
+        color: #fff;
+        font-weight: 400;
+        flex: 1;
+        margin-left: 4px;
+      }
+
+      .value {
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+  }
+}

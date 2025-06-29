@@ -1,0 +1,62 @@
+.audience-insights {
+  background-color: #1e1e1e;
+  border-radius: 4px;
+  padding: 16px;
+  width: 100%;
+  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+
+  &__title {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    justify-content: center;
+
+    .tab {
+      padding: 6px 12px;
+      border-radius: 16px;
+      border: none;
+      font-size: 13px;
+      background-color: #2e2e2e;
+      color: #999;
+      cursor: pointer;
+      flex: 1;
+      text-align: center;
+
+      &.active {
+        background-color: #00e7ff;
+        color: #000;
+        font-weight: 600;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__content {
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+    &.transitioning {
+      opacity: 0.7;
+      transform: translateX(10px);
+    }
+  }
+}

@@ -1,0 +1,306 @@
+// General styles used across the platform
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #000;
+  color: white;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Form elements
+input,
+button {
+  font-family: inherit;
+}
+
+// Input styles
+.input-dark {
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0F0F0F;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  font-size: 15px;
+  font-family: 'Lexend', 'Lexend Fallback';
+  font-style: normal;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:focus {
+    border-color: rgba(255, 255, 255, 0.16);
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+// Input styles
+.input-text-area-dark {
+  width: 100%;
+  height: 180px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0F0F0F;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  font-size: 15px;
+  font-family: 'Lexend', 'Lexend Fallback';
+  font-style: normal;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:focus {
+    border-color: rgba(255, 255, 255, 0.16);
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+// Chipped button style
+.btn-chipped {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, #00C4FF 0%, #0066FF 100%);
+  border: none;
+  height: 48px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  clip-path: polygon(8px 0,
+      100% 0,
+      100% calc(100% - 8px),
+      calc(100% - 8px) 100%,
+      0 100%,
+      0 8px);
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  // White variant
+  &.btn-chipped-white {
+    background: white !important;
+    color: black !important;
+    font-weight: 600 !important;
+  }
+
+  // Gray variant
+  &.btn-chipped-gray {
+    background: rgba(255, 255, 255, 0.16) !important;
+    color: white !important;
+    font-weight: 500 !important;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2) !important;
+    }
+  }
+}
+
+// Form elements
+.form-control {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Transitions
+.transition-base {
+  transition: all 0.2s ease;
+}
+
+// Utilities
+.text-gradient {
+  background: linear-gradient(90deg, #00C4FF 0%, #0066FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Container
+.container-custom {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (min-width: 640px) {
+    max-width: 640px;
+    padding: 0 32px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+// Buttons base
+.button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+// Colors
+:root {
+  --primary: #0066FF;
+  --primary-light: #00C4FF;
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-tertiary: rgba(255, 255, 255, 0.5);
+  --background-primary: #111111;
+  --background-secondary: #1A1A1A;
+}
+
+// Typography
+.heading-1 {
+  @apply text-4xl font-bold;
+}
+
+.heading-2 {
+  @apply text-3xl font-bold;
+}
+
+.heading-3 {
+  @apply text-2xl font-bold;
+}
+
+.body-text {
+  @apply text-base text-gray-600 dark:text-gray-300;
+}
+
+// Form elements
+.form-input {
+  @apply bg-gray-800 border-gray-700 text-white rounded-lg py-3 px-4 w-full;
+
+  &:focus {
+    @apply border-blue-500 ring-1 ring-blue-500 outline-none;
+  }
+
+  &::placeholder {
+    @apply text-gray-400;
+  }
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2;
+}
+
+// Buttons
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 border rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white border-transparent hover:bg-blue-600 focus:ring-blue-500;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 focus:ring-gray-500;
+}
+
+// Layout utilities
+.container-fluid {
+  @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section {
+  @apply py-12 sm:py-16;
+}
+
+// Card
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm;
+}
+
+.card-body {
+  @apply p-6;
+}
+
+// Dark mode support
+.dark {
+  @apply bg-gray-900 text-white;
+
+  .card {
+    @apply bg-gray-800;
+  }
+
+  .border-base {
+    @apply border-gray-700;
+  }
+}
+
+.post-label {
+  color: white !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}

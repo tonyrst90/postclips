@@ -1,0 +1,33 @@
+
+// Font Family
+$analytics-font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, sans-serif;
+
+// Colors
+$analytics-header-bg: #232323;
+$analytics-subheader-border: #3f3f46;
+$analytics-icon-color: #cbd5e1;
+$analytics-icon-color-hover: #ffffff;
+$analytics-icon-bg-hover: rgba(255, 255, 255, 0.1);
+$analytics-icon-focus-ring: rgba(255, 255, 255, 0.2);
+$analytics-subheader-text: #9ca3af;
+$notification-badge-bg: #ef4444;
+$analytics-page-bg: #121212;
+$analytics-primary-text: #ffffff;
+$analytics-link-color: #00E7FF;
+$analytics-progress-color: linear-gradient(90deg, #00E7FF 0%, #003FDD 100%); // Exact Figma gradient: 90deg from cyan to blue
+$analytics-stat-card-text: #121212;
+$analytics-stat-card-bg: #ffffff;
+$analytics-title-text: #ffffff;
+// Spacing
+$analytics-header-height: 56px;
+$analytics-subheader-height: 48px;
+$analytics-horizontal-padding: 1rem;
+$analytics-actions-gap: 0.5rem;
+$analytics-page-content-padding: 32px;
+$analytics-corner-cut-size: 16px;
+
+// Typography
+$analytics-subheader-font-size: 1rem;
+$analytics-subheader-font-weight: 500;
+$analytics-subheader-line-height: 1.5rem;

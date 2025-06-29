@@ -1,0 +1,224 @@
+.howitworks_section {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
+
+  .howitworks_scrollWrapper {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+    }
+
+    .howitworks_videoColumn {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem 2rem;
+      z-index: 1;
+      overflow-y: hidden;
+
+      @media (min-width: 768px) {
+        align-items: flex-end;
+        padding-right: 5rem;
+      }
+  
+      .howitworks_videoStack {
+        position: relative;
+        width: 220px;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 768px) {
+          height: 70vh;
+          width: 300px;
+          margin-right: 1.3rem;
+        }
+      }
+    }
+
+    .howitworks_textColumn {
+      position: relative;
+      z-index: 10;
+      height: 100%;
+
+      @media (min-width: 768px) {
+        height: 70vh;
+        overflow: hidden;
+      }
+    
+      @media (min-width: 768px) {
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 80px;
+          z-index: 20;
+          pointer-events: none;
+        }
+      
+        &::before {
+          top: 0;
+          background: linear-gradient(to bottom, #000, rgba(0,0,0,0.78), transparent)
+        }
+      
+        &::after {
+          bottom: 0;
+          background: linear-gradient(to top, #000, rgba(0,0,0,0.78), transparent)
+        }
+      }
+    
+      .howitworks_textScroller {
+        padding: 4rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        @media (min-width: 768px) {
+          overflow-y: scroll;
+          height: 100vh;
+          padding: 0;
+
+          .howitworks_step {
+            min-height: 50vh;
+
+            &:first-child {
+              min-height: 100vh;
+
+              .howitworks_title {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+    
+        .howitworks_step {
+          scroll-snap-align: start;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 4rem 2rem;
+          box-sizing: border-box;
+    
+          h2 {
+            font-size: 2rem;
+            color: #FFF;
+            width: 100%;
+            margin-bottom: 1rem;
+          }
+    
+          p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            color: #FFFFFF99;
+            line-height: 1.2;
+            width: 100%;
+          }
+
+          video {
+            width: 70vw;
+            height: 140vw;
+            object-fit: cover;
+            border-radius: 2.5rem;
+          }
+        }
+      }
+    }
+
+    .howitworks_video {
+      width: 80%;
+      position: relative;
+      transition: opacity 0.8s ease-in-out;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      pointer-events: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+        
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        opacity: 0;
+      }
+
+      video {
+        object-fit: cover;
+        width: 35vh;
+        height: 70vh;
+        border-radius: 2rem;
+        z-index: 2;
+      }
+
+      &.visible {
+        opacity: 1;
+        pointer-events: auto;
+        z-index: 2;
+      }
+    }
+  }
+
+  .howitworks_title {
+    font-size: 4rem;
+    line-height: 5.6rem;
+    color: #FFF;
+    margin-bottom: 2rem;
+    font-weight: 600;
+
+    @media (min-width: 768px) {
+      font-size: 6rem;
+    }
+  } 
+
+  .howitworks_videoColumn .howitworks_title {
+    font-size: 5rem;
+    line-height: 4.6rem;
+
+    margin-top: 4rem;
+    margin-bottom: -7rem;
+  }
+}
+
+.mobile-only {
+  @media (max-width: 768px) {
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .howitworks_videoMobile video {
+    width: 35vh;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+}

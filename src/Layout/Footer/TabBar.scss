@@ -1,0 +1,48 @@
+.tab-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1e1e1e;
+  padding: 8px 0;
+  border-top: 1px solid #333;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; // make sure it's above content
+
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5); // optional for depth
+  
+}
+
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 4px;
+  padding: 8px 0;
+  color: #999;
+  text-decoration: none;
+
+  .tab-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  &.active {
+    color: #00e7ff;
+
+    svg {
+      fill: #00e7ff;
+    }
+  }
+}

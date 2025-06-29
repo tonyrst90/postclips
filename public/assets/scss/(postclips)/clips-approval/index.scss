@@ -1,0 +1,272 @@
+.clips-approval {
+    &__container {
+        margin-top: 24px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 100vh;
+        background-color: $dark-body-background;
+    }
+
+    &__header {
+        margin-bottom: 1.5rem;
+    }
+
+    &__title {
+        color: white !important;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    &__dropdown-container {
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: 767px) {
+            margin-top: 1rem;
+        }
+    }
+
+    &__dropdown {
+        min-width: 180px;
+        text-align: left;
+
+        .dropdown-toggle {
+            background-color: #FFFFFF0F !important;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            width: unset;
+            text-align: left;
+            padding-left: 0.7rem;
+            padding-right: 1.85rem;
+            padding-top: 0.500rem;
+            padding-bottom: 0.500rem;
+            min-width: 200px;
+            border: none;
+        }
+    }
+
+    &__dropdown-menu {
+        background-color: #343a40;
+        border: 1px solid #495057;
+        margin-top: 0.5rem;
+        padding: 0.5rem 0;
+        min-width: 180px;
+    }
+
+    &__dropdown-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        padding: 0.5rem 1rem;
+
+        &:hover,
+        &:focus {
+            background-color: #495057;
+            color: #fff;
+        }
+
+        &.active {
+            background-color: #0d6efd;
+            color: #fff;
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+            margin-left: 0.5rem;
+        }
+    }
+
+    &__status-bar {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        .clips-approval__status-btn {
+            background: #242424;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.5rem 1.2rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            &.active {
+                background: #FFFFFF;
+                color: #18191b;
+            }
+            .clips-approval__status-count {
+                font-weight: 700;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: flex-start;
+    }
+
+    &__card {
+        background: #232323;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 220px;
+        min-height: 420px;
+        border: none;
+        box-shadow: 0 2px 8px #00000022;
+        position: relative;
+        &--placeholder {
+            background: #18191b;
+            .clips-approval__thumb--placeholder {
+                background: #232323;
+            }
+        }
+    }
+
+    &__thumb-container {
+        position: relative;
+        width: 100%;
+        height: 320px;
+        background: #232323;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__thumb {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+        &--placeholder {
+            width: 100%;
+            height: 320px;
+            background: #232323;
+            border-radius: 8px 8px 0 0;
+        }
+    }
+
+    &__play-overlay {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    &__play-bg {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: #FFFFFF33;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 0 10px 4px #FFFFFF33;
+    }
+
+    &__play-icon {
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        filter: drop-shadow(0 2px 8px #000);
+        opacity: 0.95;
+        margin-left: 4px;
+    }
+
+    &__thumb-brand {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: #ffd600;
+        font-weight: 700;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .clips-approval__thumb-brand-netflix {
+            color: #fff;
+            background: #e50914;
+            border-radius: 4px;
+            padding: 0 0.4em;
+            margin-left: 0.5em;
+            font-size: 0.95em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__card-body {
+        padding: 1rem 1rem 0.5rem 1rem;
+        background: #232323;
+        color: #fff;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__user-row {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.3rem;
+    }
+
+    &__user-avatar {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ffd600;
+        background: #fff;
+    }
+
+    &__user-handle {
+        font-size: 0.95rem;
+        color: #ffd600;
+        font-weight: 600;
+    }
+
+    &__desc {
+        font-size: 0.95rem;
+        color: #fff;
+        margin-bottom: 0.2rem;
+        min-height: 2.2em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__campaign-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.2rem;
+    }
+
+    &__time {
+        font-size: 1rem;
+        color: #ffd600;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        .clips-approval__time-icon {
+            font-size: 1.1em;
+            margin-right: 0.2em;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.age-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  justify-content: center;
+
+  &__legend {
+    display: flex;
+    gap: 24px;
+    font-size: 13px;
+    color: #ccc;
+    align-items: center;
+
+    .percentage {
+      color: #ffffff;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+      transform: translateY(1px);
+    }
+
+    .woman {
+      background-color: #7ec6ff;
+    }
+    .man {
+      background-color: #00a3ff;
+    }
+  }
+
+  &__bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; // reduced from 16px for more compact layout
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 1px; // label-bar spacing
+  }
+
+  &__label {
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 500;
+    padding-left: 1px;
+    margin-bottom: 2px;
+  }
+
+  &__bar-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__bar-track {
+    flex: 1;
+    display: flex; // 💥 Make it flex to allow vertical centering
+    align-items: center;
+    height: 18px;
+  }
+
+  &__bar-group {
+    display: flex;
+    width: 100%;
+    height: 18px;
+    gap: 1px;
+  }
+
+  .bar {
+    height: 18px;
+    border-radius: 0;
+  }
+
+  .bar.woman {
+    background-color: #7ec6ff;
+  }
+  .bar.man {
+    background-color: #00a3ff;
+  }
+
+  &__percent {
+    width: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: right;
+    line-height: 1;
+    position: relative;
+    top: -1px; // 🔧 nudge to align visually with bar
+  }
+}

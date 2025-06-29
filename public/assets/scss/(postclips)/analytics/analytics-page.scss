@@ -1,0 +1,522 @@
+// ==========================================================================
+// Analytics Header Component Styles
+// ==========================================================================
+
+// --------------------------------------------------------------------------
+// Design Tokens / Variables
+// --------------------------------------------------------------------------
+
+@import "./variables";
+
+@font-face {
+  font-family: "Sora";
+  src: url("/assets/fonts/dashboard/Sora-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("/assets/fonts/dashboard/SpaceGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.analytics-header-wrapper {
+  font-family: $analytics-font-family;
+  background-color: $analytics-header-bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.analytics-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $analytics-header-height;
+  padding: 0 $analytics-horizontal-padding;
+}
+
+.analytics-header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.analytics-header__actions {
+  display: flex;
+  align-items: center;
+  gap: $analytics-actions-gap;
+}
+
+.analytics-header__button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: $analytics-icon-color;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+
+  &:hover {
+    color: $analytics-icon-color-hover;
+    background-color: $analytics-icon-bg-hover;
+    transform: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px $analytics-header-bg,
+      0 0 0 4px $analytics-icon-color-hover;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.notification-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $notification-badge-bg;
+  border: 1.5px solid $analytics-header-bg;
+}
+
+.analytics-subheader {
+  display: flex;
+  align-items: center;
+  height: $analytics-subheader-height;
+  padding: 0 $analytics-horizontal-padding;
+  border-top: 1px solid $analytics-subheader-border;
+}
+
+.analytics-subheader__title {
+  font-size: $analytics-subheader-font-size;
+  font-weight: $analytics-subheader-font-weight;
+  line-height: $analytics-subheader-line-height;
+  color: $analytics-subheader-text;
+  margin-bottom: 0;
+}
+
+body.dark-only .page-wrapper .page-body-wrapper .page-body {
+  background-color: $analytics-page-bg !important;
+}
+
+.analytics-page-content {
+  background-color: $analytics-page-bg;
+  min-height: 100vh;
+  font-family: $analytics-font-family;
+  padding-top: calc(
+    #{$analytics-subheader-height} + #{$analytics-page-content-padding}
+  );
+  padding-bottom: 2rem;
+  margin-bottom: calc(56px + 18px);
+
+  .row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.campaign-performance-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.campaign-performance-header__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: $analytics-primary-text !important;
+  margin-bottom: 0;
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.campaign-performance-header__export-btn {
+  font-family: $analytics-font-family;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: $analytics-link-color;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: auto;
+
+  &:hover {
+    color: lighten($analytics-link-color, 10%);
+  }
+}
+
+.analytics-filters {
+  margin-bottom: 1.5rem;
+}
+
+select.analytics-filter-select {
+  width: 100%;
+  background-color: $analytics-header-bg;
+  border: 1px solid #3f3f46;
+  border-radius: 0.5rem;
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  color: $analytics-primary-text;
+  font-family: $analytics-font-family;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  appearance: none;
+  background-image: url("/assets/icons/analytics/sort.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 18px;
+
+  &:hover {
+    border-color: lighten(#3f3f46, 10%);
+  }
+}
+
+.stats-card {
+  background-color: $analytics-stat-card-bg;
+  border-radius: 4px; // Exact Figma specification
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 120px;
+  overflow: visible;
+  
+  // Use clip-path directly on the card instead of pseudo-elements
+  &--cut-tr {
+    clip-path: polygon(0 0, calc(100% - #{$analytics-corner-cut-size}) 0, 100% #{$analytics-corner-cut-size}, 100% 100%, 0 100%);
+  }
+
+  &--cut-tl {
+    clip-path: polygon(#{$analytics-corner-cut-size} 0, 100% 0, 100% 100%, 0 100%, 0 #{$analytics-corner-cut-size});
+  }
+
+  &--cut-br {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - #{$analytics-corner-cut-size}), calc(100% - #{$analytics-corner-cut-size}) 100%, 0 100%);
+  }
+
+  &--cut-bl {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, #{$analytics-corner-cut-size} 100%, 0 calc(100% - #{$analytics-corner-cut-size}));
+  }
+
+  // Handle multiple corner cuts
+  &--cut-tr.stats-card--cut-br {
+    clip-path: polygon(0 0, calc(100% - #{$analytics-corner-cut-size}) 0, 100% #{$analytics-corner-cut-size}, 100% calc(100% - #{$analytics-corner-cut-size}), calc(100% - #{$analytics-corner-cut-size}) 100%, 0 100%);
+  }
+
+  &--cut-tl.stats-card--cut-bl {
+    clip-path: polygon(#{$analytics-corner-cut-size} 0, 100% 0, 100% 100%, #{$analytics-corner-cut-size} 100%, 0 calc(100% - #{$analytics-corner-cut-size}), 0 #{$analytics-corner-cut-size});
+  }
+
+  &--cut-tr.stats-card--cut-tl {
+    clip-path: polygon(#{$analytics-corner-cut-size} 0, calc(100% - #{$analytics-corner-cut-size}) 0, 100% #{$analytics-corner-cut-size}, 100% 100%, 0 100%, 0 #{$analytics-corner-cut-size});
+  }
+
+  &--cut-br.stats-card--cut-bl {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - #{$analytics-corner-cut-size}), calc(100% - #{$analytics-corner-cut-size}) 100%, #{$analytics-corner-cut-size} 100%, 0 calc(100% - #{$analytics-corner-cut-size}));
+  }
+
+  &__title {
+    color: $analytics-stat-card-text;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  &__value-container {
+    margin-bottom: 0.25rem;
+  }
+
+  &__value {
+    color: $analytics-stat-card-text;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+  }
+
+  &__value-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+  }
+
+  &__value-suffix {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: $analytics-stat-card-text;
+    margin-left: 2px;
+  }
+
+  &__progress-bar {
+    height: 6px;
+    background-color: rgba(0, 63, 221, 0.2); // Surface/Alpha/Blue-500-20% (#003FDD - 20%)
+    border-radius: 2px; // Updated to match Figma specification
+    margin-top: 0.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__progress-fill {
+    height: 100%;
+    background-color: var(--progress-color, $analytics-progress-color);
+    border-radius: 2px; // Updated to match Figma specification
+    transition: width 0.3s ease;
+    position: relative;
+  }
+
+  &__change {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 0;
+    flex-shrink: 0;
+    margin-left: 0;
+
+    span {
+      color: $analytics-stat-card-text;
+      font-weight: 400;
+      margin-left: 0.25rem;
+    }
+
+    &--increase {
+      display: flex;
+      align-items: center;
+      font-size: 0.75rem;
+      font-weight: 400;
+
+      span {
+        color: $analytics-stat-card-text;
+        margin-left: 0.25rem;
+      }
+
+      .percentage-badge {
+        background-color: #22c55e1a;
+        color: #22c55e;
+        font-weight: 600;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        line-height: 1;
+        margin-right: 0.25rem;
+        display: inline-block;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.growth-card-wrapper {
+  margin-top: 24px;
+}
+
+.growth-card {
+  background-color: #1e1e1e;
+  border-radius: 4px; // Exact Figma specification
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Sora", sans-serif;
+
+  padding: 16px;
+  gap: 4px;
+
+  &__value {
+    font-size: 1.375rem;
+    margin: 0 0;
+    font-weight: 700;
+    margin-top: -0.7rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+  }
+
+  &__title {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+  }
+
+  &__cpm-badge {
+    background: #333;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    color: #ccc;
+
+    strong {
+      color: #fff;
+    }
+  }
+
+  &__change {
+    font-size: 0.75rem;
+    color: #22c55e;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    margin-top: -0.5rem;
+
+    .percentage-badge {
+      background-color: rgba(34, 197, 94, 0.1);
+      color: #22c55e;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      line-height: 1;
+    }
+  }
+
+  &__chart-wrapper {
+    flex-grow: 1;
+    margin: 0; // Remove any extra spacing
+    min-height: 200px;
+    width: 100%; // Ensure full width usage
+
+    .recharts-cartesian-grid line {
+      stroke: #3f3f46;
+      stroke-opacity: 0.5;
+    }
+
+    .recharts-tooltip-wrapper {
+      z-index: 10;
+    }
+
+    .recharts-responsive-container {
+      // Remove any default padding
+      .recharts-wrapper {
+        // Ensure the SVG uses full space
+        svg {
+          overflow: visible;
+        }
+      }
+    }
+
+    // Position Y-axis labels closer to the right edge and right-align them
+    .recharts-yAxis .recharts-cartesian-axis-tick {
+      text {
+        text-anchor: end !important;
+        transform: translateX(30px);
+      }
+    }
+  }
+}
+
+.budget-allocation-card-wrapper {
+  margin-top: 24px;
+}
+
+.budget-card {
+  background-color: #1e1e1e;
+  border-radius: 4px; // Exact Figma specification
+  padding: 1rem;
+  color: white;
+  font-family: "Sora", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .recharts-sector:focus {
+    outline: none;
+  }
+
+  &__title {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+  }
+
+  &__value {
+    font-size: 1.375rem;
+    margin: 4px 0;
+    font-weight: 700;
+    margin-top: -0.7rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__legend {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.875rem;
+    color: #e4e4e7;
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.4rem;
+
+      .budget-card__dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff !important;
+  margin: 0;
+}

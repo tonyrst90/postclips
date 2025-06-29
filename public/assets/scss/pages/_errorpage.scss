@@ -1,0 +1,452 @@
+/**=====================
+    3.16 Errorpage CSS Start
+==========================**/
+.error-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: $white;
+  &.maintenance-bg {
+    background-image: url(../../images/other-images/maintenance-bg.jpg);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: overlay;
+  }
+  .maintenance-icons{
+    li{
+      i{
+        color: $semi-dark;
+        font-size: 50px;
+        animation: rotate 8s infinite linear;
+      }
+      &:nth-child(2){
+        i{
+          font-size: 100px;
+          margin-left: 110px;
+          margin-top: -25px;
+        }
+      }
+      &:nth-child(3){
+        i{
+          font-size: 150px;
+          margin-top: -85px;
+          margin-right: 120px;
+        }
+      }
+    }
+  }
+  svg.maintanance {
+    height: 420px;
+  }
+  svg {
+    width: 100%;
+    height: 380px;
+  }
+  .maintenance-heading {
+    margin-top: 20px;
+    .headline {
+      font-size: 99px;
+      font-weight: 900;
+      letter-spacing: 10px;
+      color: $primary-color;
+      z-index: 2;
+      position: relative;
+    }
+  }
+  .error-heading {
+    margin-top: 115px;
+    .headline {
+      font-size: 285px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-top: -130px;
+    }
+  }
+  .error {
+    margin: 70px 0 100px;
+    color: $black;
+    .error-title {
+      font-size: 9.5rem;
+      color: $white;
+      text-shadow: 6px 6px 7px rgba(0, 0, 0, 0.32);
+    }
+    .line-bottom {
+      width: 10%;
+      height: 5px;
+      background-color: $warning-color;
+      border: none;
+    }
+    .c-white {
+      color: $white;
+    }
+    .error-btn {
+      text-align: center;
+    }
+  }
+  .svg-wrraper {
+    margin-bottom: 35px;
+    svg {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 440px;
+    }
+  }
+  h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .sub-content {
+    font-size: 18px;
+    color: $theme-body-font-color;
+    letter-spacing: 1px;
+    line-height: 35px;
+    font-weight: normal;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 1199px) {
+  .error-wrapper {
+    svg {
+      height: 320px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .error-wrapper {
+    svg {
+      height: 280px;
+    }
+    .svg-wrraper {
+      svg {
+        height: 450px;
+      }
+    }
+    .sub-content {
+      line-height: 25px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .error-wrapper {
+    h3 {
+      margin-bottom: 18px;
+    }
+    .sub-content {
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .error-wrapper {
+    .svg-wrraper {
+      margin-bottom: 25px;
+      svg {
+        height: 380px;
+      }
+    }
+    .sub-content {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .error-wrapper {
+    .svg-wrraper {
+      svg {
+        height: auto;
+      }
+    }
+  }
+}
+
+// Style for Error1 Pages
+.error1shp0 {
+  fill: #e0e0e0;
+}
+.error1shp1 {
+  fill: #ebebeb;
+}
+.error1shp2 {
+  fill: #263238;
+}
+.error1shp3 {
+  fill: #455a64;
+}
+.error1shp4 {
+  fill: #ffffff;
+}
+.error1shp5 {
+  fill: #003FDD;
+}
+.error1shp6 {
+  fill: #000000;
+}
+.error1shp7 {
+  opacity: 0.302;
+  fill: #000000;
+}
+.error1shp8 {
+  fill: #fafafa;
+}
+.error1shp9 {
+  opacity: 0.2;
+  fill: #000000;
+}
+.error1shp10 {
+  fill: #ffbe9d;
+}
+.error1shp11 {
+  fill: #eb996e;
+}
+
+// Style for Error2 Pages
+.error2shp0 {
+  fill: #f5f5f5;
+}
+.error2shp1 {
+  fill: #263238;
+}
+.error2shp2 {
+  fill: #ff8b7b;
+}
+.error2shp3 {
+  fill: #003FDD;
+}
+.error2shp4 {
+  fill: #ffffff;
+}
+.error2shp5 {
+  opacity: 0.2;
+  fill: #000000;
+}
+.error2shp6 {
+  opacity: 0.302;
+  fill: #003FDD;
+}
+.error2shp7 {
+  fill: #ff5652;
+}
+.error2shp8 {
+  opacity: 0.702;
+  fill: #ffffff;
+}
+.error2shp9 {
+  opacity: 0.2;
+  fill: #003FDD;
+}
+.error2shp10 {
+  fill: #ffc3bd;
+}
+.error2shp11 {
+  fill: #ed847e;
+}
+// Style for Error3 Pages
+.error3shp0 {
+  fill: #003FDD;
+}
+.error3shp1 {
+  fill: #ebebeb;
+}
+.error3shp2 {
+  fill: #263238;
+}
+.error3shp3 {
+  fill: #ffffff;
+}
+.error3shp4 {
+  opacity: 0.3;
+}
+.error3shp5 {
+  fill: #ffffff;
+  opacity: 0.3;
+}
+.error3shp6 {
+  fill: #eeb82f;
+}
+.error3shp7 {
+  opacity: 0.1;
+}
+.error3shp8 {
+  fill: #c7c7c7;
+}
+.error3shp9 {
+  opacity: 0.2;
+}
+.error3shp10 {
+  fill: #a6a6a6;
+}
+.error3shp11 {
+  fill: #ffffff;
+  opacity: 0.5;
+}
+// Style for Error4 Pages
+.error4shp0 {
+  fill: #e0e0e0;
+}
+.error4shp1 {
+  fill: #46476c;
+}
+.error4shp2 {
+  fill: #003FDD;
+}
+.error4shp3 {
+  opacity: 0.4;
+  mix-blend-mode: soft-light;
+  fill: #ffffff;
+}
+.error4shp4 {
+  opacity: 0.051;
+  mix-blend-mode: multiply;
+  fill: #000000;
+}
+.error4shp5 {
+  opacity: 0.4;
+  fill: #ffffff;
+}
+.error4shp6 {
+  opacity: 0.2;
+  fill: #000000;
+}
+.error4shp7 {
+  opacity: 0.102;
+  fill: #000000;
+}
+.error4shp8 {
+  fill: #ffffff;
+}
+.error4shp9 {
+  opacity: 0.2;
+  fill: #ffffff;
+}
+.error4shp10 {
+  fill: #000000;
+}
+.error4shp11 {
+  opacity: 0.149;
+  fill: #000000;
+}
+.error4shp12 {
+  fill: #37474f;
+}
+.error4shp13 {
+  fill: #263238;
+}
+.error4shp14 {
+  opacity: 0.302;
+  fill: #000000;
+}
+.error4shp15 {
+  opacity: 0.502;
+  fill: #000000;
+}
+.error4shp16 {
+  opacity: 0.702;
+  fill: #000000;
+}
+.error4shp17 {
+  fill: #fafafa;
+}
+.error4shp18 {
+  fill: #ffa8a7;
+}
+.error4shp19 {
+  fill: #f28f8f;
+}
+// Style for Error5 Pages
+.error5shp0 {
+  fill: #f5f5f5;
+}
+.error5shp1 {
+  fill: #ffffff;
+}
+.error5shp2 {
+  fill: #263238;
+}
+.error5shp3 {
+  fill: #003FDD;
+}
+.error5shp4 {
+  fill: #003FDD;
+  opacity: 0.5;
+}
+.error5shp5 {
+  fill: #ffffff;
+  opacity: 0.2;
+}
+.error5shp6 {
+  fill: #ffffff;
+  opacity: 0.4;
+}
+.error5shp7 {
+  opacity: 0.1;
+}
+.error5shp8 {
+  opacity: 0.3;
+}
+.error5shp9 {
+  fill: #f0f0f0;
+}
+// Style for Error6 Pages
+.error6shp0 {
+  fill: #f5f5f5;
+}
+.error6shp1 {
+  fill: #e0e0e0;
+}
+.error6shp2 {
+  fill: #ebebeb;
+}
+.error6shp3 {
+  fill: #003FDD;
+}
+.error6shp4 {
+  fill: #000000;
+}
+.error6shp5 {
+  fill: #ffffff;
+}
+.error6shp6 {
+  fill: #455a64;
+}
+.error6shp7 {
+  opacity: 0.349;
+  fill: #000000;
+}
+.error6shp8 {
+  opacity: 0.2;
+  fill: #000000;
+}
+.error6shp9 {
+  opacity: 0.251;
+  fill: #000000;
+}
+.error6shp10 {
+  opacity: 0.502;
+  fill: #000000;
+}
+.error6shp11 {
+  fill: #fafafa;
+}
+.error6shp12 {
+  opacity: 0.749;
+  fill: #ffffff;
+}
+.error6shp13 {
+  opacity: 0.102;
+  fill: #000000;
+}
+.error6shp14 {
+  fill: #f28f8f;
+}
+
+.error5shp3,.error5shp2{
+  transform: translate(0, 0);
+}
+/**=====================
+    3.16 Errorpage CSS Start
+==========================**/

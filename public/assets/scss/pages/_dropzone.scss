@@ -1,0 +1,138 @@
+/* Dropzone for initial file upload */
+.dropzone-container {
+    border: 2px dashed var(--theme-default);
+    padding: 100px;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), -1px -1px 4px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  .dropzone-container:hover {
+    background: #f8fdf8;
+    border-color: var(--theme-default);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15), -1px -1px 6px rgba(255, 255, 255, 0.6);
+  }
+  
+  .dropzone-container p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Dropzone for adding more files */
+  .add-more-files-zone {
+    border: 2px dashed #2196f3;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(145deg, #eef7ff, #ffffff);
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), -1px -1px 4px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  .add-more-files-zone:hover {
+    background: #e3f2fd;
+    border-color: #1e88e5;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15), -1px -1px 6px rgba(255, 255, 255, 0.6);
+  }
+  
+  .add-more-files-zone p {
+    font-size: 12px;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Uploaded files grid */
+  .uploaded-files {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+  
+  /* Individual file card */
+  .file-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: linear-gradient(145deg, #f9f9f9, #ffffff);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), -1px -1px 4px rgba(255, 255, 255, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .file-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15), -2px -2px 8px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* File thumbnail (for images) */
+  .file-thumbnail {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Placeholder for non-image files */
+  .file-placeholder {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    background: #f5f5f5;
+    color: #888;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 12px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* File name and size */
+  .file-name {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 4px 0;
+  }
+  
+  .file-size {
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 6px;
+  }
+  
+  /* Remove button */
+  .remove-button {
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .remove-button:hover {
+    background: #d93636;
+    transform: scale(1.1);
+  }
+  
+  .remove-button:active {
+    transform: scale(0.95);
+  }

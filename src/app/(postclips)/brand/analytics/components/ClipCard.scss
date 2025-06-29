@@ -1,0 +1,50 @@
+.clip-card {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 8px 12px;
+  border-bottom: 1px solid #333;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__thumbnail {
+    width: 35px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #ffffff !important;
+    margin: 0;
+  }
+
+  &__stats {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: #aaa;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    img {
+      display: inline-block;
+    }
+  }
+}
